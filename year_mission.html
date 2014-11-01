@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function yearMissionCalculate() {
+				var today = new Date(),
+					currentYear = today.getFullYear(),
+					yearStart = new Date(currentYear, 0, 0),
+					dayOfYear = Math.round((today-yearStart)/864e5),
+					alreadyRun = Number(document.getElementById("alreadyRunInput").value);
+
+				document.getElementById("calculationResul").innerText =
+					"debt:\t" + (((currentYear/365)*dayOfYear)-alreadyRun).toFixed(2) + "\n" +
+					"km left to goal:\t" + (currentYear-alreadyRun) + "\n" +
+					"needs km per day:\t" + (currentYear-alreadyRun)/(365-dayOfYear).toFixed(2);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<label for="alreadyRunInput">AlreadyRun:</label>
+			<input id="alreadyRunInput" type="number" />
+			<button type="button" onClick="yearMissionCalculate()">Calculate</button><br>
+			<label id="calculationResul" />
+		</div>
+	</body>
+</html>
