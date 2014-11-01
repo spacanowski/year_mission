@@ -31,3 +31,6 @@ needs km per day:
 This is for year 2014.
 debt means you are 675.04 km behind schedule
 Rest is pretty clear.
+
+#Bonus
+As bonus html + js implementation was added. This way it can be propagated and used on sites, just copy and style it.
