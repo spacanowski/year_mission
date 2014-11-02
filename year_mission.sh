@@ -1,5 +1,11 @@
 #!/bin/bash
 
+re='^[0-9]+([.][0-9]+)?$'
+if ! [[ $1 =~ $re ]] ; then
+	echo "Wrong argument"
+	exit -1
+fi
+
 day=$(date +%j)
 year=$(date +%Y)
 
